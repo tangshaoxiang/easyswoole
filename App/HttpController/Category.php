@@ -14,7 +14,11 @@ class Category extends Controller
     public function index()
     {
         $this->response()->write('hello world');
-
+        $data = [
+          'id' => 1,
+            'name' =>'darian'
+        ];
+        return $this->writeJson('200',$data,"成功");
         // TODO: Implement index() method.
     }
 }
