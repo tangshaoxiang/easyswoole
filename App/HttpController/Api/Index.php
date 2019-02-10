@@ -6,11 +6,11 @@
  * Time: 21:16
  */
 
-namespace App\HttpController;
+namespace App\HttpController\Api;
 
 use EasySwoole\Http\AbstractInterface\Controller;
 
-class Category extends Controller
+class Index extends Controller
 {
     public function index()
     {
@@ -21,5 +21,14 @@ class Category extends Controller
         ];
         return $this->writeJson('200',"成功",$data);
         // TODO: Implement index() method.
+    }
+
+    public function video(){
+        $data = [
+            'id' => 1,
+            'name' => 'darian',
+            'param' => $this->request()->getQueryParam()
+        ];
+        return $this->writeJson('200',"成功",$data);
     }
 }
