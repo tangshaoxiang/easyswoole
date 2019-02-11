@@ -37,7 +37,7 @@ class Index extends Base
             'id' => 1,
             'name' => 'darian',
             'param' => $this->request()->getRequestParam(),
-
+            'data' => $data
 
         ];
         return $this->writeJson('200',"成功",$res);
