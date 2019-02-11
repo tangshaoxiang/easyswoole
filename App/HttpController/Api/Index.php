@@ -8,8 +8,9 @@
 
 namespace App\HttpController\Api;
 
-use EasySwoole\EasySwoole\Config;
-use EasySwoole\Mysqli\Mysqli;
+use App\Utility\Pool\MysqlObject;
+use App\Utility\Pool\MysqlPool;
+
 
 class Index extends Base
 {
