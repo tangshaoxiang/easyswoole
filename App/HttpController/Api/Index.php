@@ -8,24 +8,31 @@
 
 namespace App\HttpController\Api;
 
-
+use EasySwoole\EasySwoole\Config;
 use EasySwoole\Mysqli\Mysqli;
 
 class Index extends Base
 {
     public function video(){
 
-        $mysql = \EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL');
-        $conf = new \EasySwoole\Mysqli\Config($mysql);
-        print_r($mysql) ;
-        print_r($conf) ;
-        $db = new Mysqli($conf);
-        $data = $db->get('test');//获取一个表的数据
+        try {
+            MysqlPool::invoke(function (MysqlObject $mysqlObject) {
+                $model = new UserModel($mysqlObject);
+                $model->insert(new UserBean($this->request()->getRequestParam()));
+            });
+        } catch (\Throwable $throwable) {
+            $this->writeJson(Status::CODE_BAD_REQUEST, null, $throwable->getMessage());
+        }catch (PoolEmpty $poolEmpty){
+            $this->writeJson(Status::CODE_BAD_REQUEST, null, '没有链接可用');
+
+        }catch (PoolUnRegister $poolUnRegister){
+            $this->writeJson(Status::CODE_BAD_REQUEST, null, '连接池未注册');
+        }
         $res = [
             'id' => 1,
             'name' => 'darian',
             'param' => $this->request()->getRequestParam(),
-            'data' => $data
+
         ];
         return $this->writeJson('200',"成功",$res);
     }
