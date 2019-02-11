@@ -13,12 +13,15 @@ class Index extends Base
 {
     public function video(){
 
-        new abc();
-        $data = [
+        $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
+        $db = new Mysqli($conf);
+        $data = $db->get('test');//获取一个表的数据
+        $res = [
             'id' => 1,
             'name' => 'darian',
-            'param' => $this->request()->getRequestParam()
+            'param' => $this->request()->getRequestParam(),
+            'data' => $data
         ];
-        return $this->writeJson('200',"成功",$data);
+        return $this->writeJson('200',"成功",$res);
     }
 }

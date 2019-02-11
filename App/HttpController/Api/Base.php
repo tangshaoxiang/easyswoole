@@ -16,7 +16,6 @@ class Base extends Controller
     {
     }
 
-
     /**
      * 权限相关
      * @param null|string $action
@@ -34,6 +33,4 @@ class Base extends Controller
     {
         $this->writeJson(400,'请求不合法');
     }
-
-
 }
