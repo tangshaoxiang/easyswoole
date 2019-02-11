@@ -16,7 +16,7 @@ use EasySwoole\Http\Message\Status;
 class Index extends Base
 {
     public function video(){
-
+        $data = [];
         try {
             MysqlPool::invoke(function (MysqlObject $mysqlObject) {
                 $table_name = 'test';
