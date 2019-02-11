@@ -45,5 +45,6 @@ class Index extends Base
         $redis = new \Redis();
         $redis->connect("127.0.0.1",6379,5);
         $redis->set("singwa456",90);
+        return $this->writeJson("200","success",$redis->get("singwa456"));
     }
 }
