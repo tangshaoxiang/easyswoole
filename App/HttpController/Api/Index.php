@@ -9,6 +9,8 @@
 namespace App\HttpController\Api;
 
 
+use EasySwoole\Mysqli\Mysqli;
+
 class Index extends Base
 {
     public function video(){
