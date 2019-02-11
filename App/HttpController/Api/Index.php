@@ -16,7 +16,6 @@ use EasySwoole\Http\Message\Status;
 class Index extends Base
 {
     public function video(){
-        $data = [];
         try {
             MysqlPool::invoke(function (MysqlObject $mysqlObject) {
                 $table_name = 'test';
@@ -24,6 +23,14 @@ class Index extends Base
                 print_r($data);
                 $sql = $mysqlObject->getLastQuery();
                 echo $sql;
+                $res = [
+                    'id' => 1,
+                    'name' => 'darian',
+                    'param' => $this->request()->getRequestParam(),
+                    'data' => $data
+
+                ];
+                return $this->writeJson('200',"成功",$res);
             });
         } catch (\Throwable $throwable) {
             $this->writeJson(Status::CODE_BAD_REQUEST, null, $throwable->getMessage());
@@ -33,13 +40,5 @@ class Index extends Base
         }catch (PoolUnRegister $poolUnRegister){
             $this->writeJson(Status::CODE_BAD_REQUEST, null, '连接池未注册');
         }
-        $res = [
-            'id' => 1,
-            'name' => 'darian',
-            'param' => $this->request()->getRequestParam(),
-            'data' => $data
-
-        ];
-        return $this->writeJson('200',"成功",$res);
     }
 }
