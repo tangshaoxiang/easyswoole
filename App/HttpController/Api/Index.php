@@ -19,8 +19,11 @@ class Index extends Base
 
         try {
             MysqlPool::invoke(function (MysqlObject $mysqlObject) {
-                $model = new UserModel($mysqlObject);
-                $model->insert(new UserBean($this->request()->getRequestParam()));
+                $table_name = 'test';
+                $data = $mysqlObject ->get($table_name);
+                print_r($data);
+                $sql = $mysqlObject->getLastQuery();
+                echo $sql;
             });
         } catch (\Throwable $throwable) {
             $this->writeJson(Status::CODE_BAD_REQUEST, null, $throwable->getMessage());
@@ -34,6 +37,7 @@ class Index extends Base
             'id' => 1,
             'name' => 'darian',
             'param' => $this->request()->getRequestParam(),
+
 
         ];
         return $this->writeJson('200',"成功",$res);
