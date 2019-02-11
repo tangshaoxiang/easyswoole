@@ -20,9 +20,7 @@ class Index extends Base
             MysqlPool::invoke(function (MysqlObject $mysqlObject) {
                 $table_name = 'test';
                 $data = $mysqlObject ->get($table_name);
-                print_r($data);
                 $sql = $mysqlObject->getLastQuery();
-                echo $sql;
                 $res = [
                     'id' => 1,
                     'name' => 'darian',
@@ -40,5 +38,12 @@ class Index extends Base
         }catch (PoolUnRegister $poolUnRegister){
             $this->writeJson(Status::CODE_BAD_REQUEST, null, '连接池未注册');
         }
+    }
+
+
+    public function getRedis(){
+        $redis = new \Redis();
+        $redis->connect("127.0.0.1",6379,5);
+        $redis->set("singwa456",90);
     }
 }
