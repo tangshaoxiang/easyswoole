@@ -16,7 +16,7 @@ class Index extends Base
     public function video(){
 
         $conf = new \EasySwoole\Mysqli\Config(\EasySwoole\EasySwoole\Config::getInstance()->getConf('MYSQL'));
-        return $conf;
+        print_r($conf) ;
         $db = new Mysqli($conf);
         $data = $db->get('test');//获取一个表的数据
         $res = [
