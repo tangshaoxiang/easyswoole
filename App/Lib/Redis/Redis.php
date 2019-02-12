@@ -25,15 +25,15 @@ class Redis {
             $redisConfig = Config::getInstance()->getConf("redis");
             var_dump($redisConfig);
             $this->redis = new \Redis();
-            $result = $this->redis->connect($redisConfig['host'],$redisConfig['port'],$redisConfig['POOL_TIME_OUT']);
+//            $result = $this->redis->connect($redisConfig['host'],$redisConfig['port'],$redisConfig['POOL_TIME_OUT']);
         } catch (\Exception $e) {
 //            throw new \Exception($e->getMessage());
             throw new \Exception("redis服务异常");
         }
 
-        if ($result === false){
-            throw new \Exception("redis 链接失败");
-        }
+//        if ($result === false){
+//            throw new \Exception("redis 链接失败");
+//        }
     }
 
     public function get($key){
