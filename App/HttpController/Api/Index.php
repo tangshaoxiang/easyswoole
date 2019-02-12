@@ -77,4 +77,9 @@ class Index extends Base
 //         */
 //        PoolManager::getInstance()->getPool(RedisPool::class)->recycleObj($redis);
     }
+
+    public function yaconf(){
+        $res = \Yaconf::get('redis');
+      return  $this->writeJson("200","yes",$res);
+    }
 }
