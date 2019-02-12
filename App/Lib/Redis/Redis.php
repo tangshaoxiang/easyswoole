@@ -5,7 +5,7 @@
  * Date: 2019/2/12
  * Time: 10:03
  */
-namespace app\Lib\Redis;
+namespace App\Lib\Redis;
 
 use EasySwoole\Component\Singleton;
 

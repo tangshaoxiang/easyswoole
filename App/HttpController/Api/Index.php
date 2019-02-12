@@ -8,7 +8,7 @@
 
 namespace App\HttpController\Api;
 
-use app\Lib\Redis\Redis;
+use App\Lib\Redis\Redis;
 use App\Utility\Pool\MysqlObject;
 use App\Utility\Pool\MysqlPool;
 use EasySwoole\Http\Message\Status;
