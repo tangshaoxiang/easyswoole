@@ -12,6 +12,7 @@ use App\Lib\Redis\Redis;
 use App\Utility\Pool\MysqlObject;
 use App\Utility\Pool\MysqlPool;
 use App\Utility\Pool\RedisPool;
+use EasySwoole\Component\Di;
 use EasySwoole\Component\Pool\PoolManager;
 use EasySwoole\EasySwoole\Config;
 use EasySwoole\Http\Message\Status;
@@ -81,5 +82,11 @@ class Index extends Base
     public function yaconf(){
         $res = \Yaconf::get('redis');
       return  $this->writeJson("200","yes",$res);
+    }
+
+    public function pub(){
+        $params = $this->request()->getRequestParam();
+
+        Di::getInstance()->get("REDIS")->rPush('imooc_list_test',$params['f']);
     }
 }

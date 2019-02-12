@@ -41,4 +41,30 @@ class Redis {
         }
        return $this->redis->get($key);
     }
+
+    /**
+     * 从队列的左边出队一个元素
+     * @param $key
+     * @return string
+     */
+    public function lPop($key){
+        if (empty($key)) {
+            return "";
+        }
+        return $this->redis->lPop($key);
+    }
+
+    /**
+     * 从队列的右边入队一个元素或多个元素
+     * @param $key
+     * @param $val
+     * @return int|string
+     */
+    public function rPush($key,$val){
+        if (empty($key)) {
+            return "";
+        }
+        return $this->redis->rPush($key,$val);
+
+    }
 }

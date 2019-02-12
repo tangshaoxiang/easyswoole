@@ -9,7 +9,10 @@
 namespace EasySwoole\EasySwoole;
 
 
+use App\Lib\Redis\Redis;
+use App\Process\Consumer;
 use App\Utility\Pool\MysqlPool;
+use EasySwoole\Component\Di;
 use EasySwoole\Component\Pool\PoolManager;
 use EasySwoole\EasySwoole\Swoole\EventRegister;
 use EasySwoole\EasySwoole\AbstractInterface\Event;
@@ -48,7 +51,26 @@ class EasySwooleEvent implements Event
 
     public static function mainServerCreate(EventRegister $register)
     {
+//        Di::getInstance()->set("MYSQL",\MysqliDb::class,Array(
+//            'host'          => '127.0.0.1',
+//            'port'          => '3306',
+//            'user'          => 'root',
+//            'timeout'       => '5',
+//            'charset'       => 'utf8mb4',
+//            'password'      => 'root',
+//            'database'      => 'swoole',
+//            'POOL_MAX_NUM'  => '20',
+//            'POOL_TIME_OUT' => '0.1',
+//        ));
+        Di::getInstance()->set("REDIS",Redis::getInstance());
+
         // TODO: Implement mainServerCreate() method.
+        $allNum = 3;
+        for ($i = 0 ;$i < $allNum;$i++){
+            ServerManager::getInstance()->getSwooleServer()->addProcess((new Consumer("consumer_{$i}"))->getProcess());
+        }
+
+
 //        $register->add($register::onWorkerStart, function (\swoole_server $server, int $workerId) {
 //            if ($server->taskworker == false) {
 //                PoolManager::getInstance()->getPool(MysqlPool::class)->preLoad(1);
