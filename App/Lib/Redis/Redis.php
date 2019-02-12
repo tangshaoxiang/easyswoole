@@ -22,6 +22,9 @@ class Redis {
         }
 
         try {
+            $mysqlConfig = Config::getInstance()->getConf("mysql");
+            var_dump($mysqlConfig);
+
             $redisConfig = Config::getInstance()->getConf("redis");
             var_dump($redisConfig);
             $this->redis = new \Redis();
