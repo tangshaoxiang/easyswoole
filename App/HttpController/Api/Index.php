@@ -53,13 +53,15 @@ class Index extends Base
 
 
 
+        $config = Config::getInstance()->getConf("redis");
+        $this->writeJson("200","成功",$config);
 
        $singwa = Redis::getInstance()->get("singwa456");
        $this->writeJson("200","success",$singwa);
 
 
 //        PoolManager::getInstance()->register(RedisPool::class, Config::getInstance()->getConf('REDIS.POOL_MAX_NUM'));
-//        $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS.POOL_TIME_OUT'));
+//        $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS. '));
 //        $redis->set('name', 'blank');
 //        $singwa = $redis->get('name');
 //        $name = $redis->get('singwa456');
