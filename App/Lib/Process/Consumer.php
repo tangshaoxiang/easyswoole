@@ -25,13 +25,10 @@ class Consumer extends AbstractProcess
          */
         $this->addTick(500,function (){
             if(!$this->isRun){
-                var_dump(111);
                 $this->isRun = true;
 //                $redis = new \redis();//此处为伪代码，请自己建立连接或者维护redis连接
                 while (true){
-                    var_dump(222);
                     try{
-                        var_dump(333);
                         $task = Di::getInstance()->get("REDIS")->lPop('imooc_list_test');
 //                        $task = $redis->lPop('task_list');
                         var_dump($this->getProcessName()."---".$task);
@@ -40,12 +37,11 @@ class Consumer extends AbstractProcess
                             var_dump($this->getProcessName()."---".$task);
                             // do you task
                             //发送邮件，推送消息，等待，写log
-                            Logger::getInstance()->log($this->getProcessName()."---".$task);
+                            \EasySwoole\EasySwoole\Logger::getInstance()->log($this->getProcessName()."---".$task);
                         }else{
                             break;
                         }
                     }catch (\Throwable $throwable){
-                        var_dump(444);
                         break;
                     }
                 }
