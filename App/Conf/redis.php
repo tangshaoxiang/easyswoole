@@ -5,7 +5,6 @@
  * Date: 2019/2/12
  * Time: 14:33
  */
-namespace App\Conf;
 return [
     'host'          => '127.0.0.1',
     'port'          => '6379',
