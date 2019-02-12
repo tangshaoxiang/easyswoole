@@ -16,6 +16,7 @@ class Consumer extends AbstractProcess
 {
     private $isRun = false;
     public function run($arg)
+//    public function run($arg)
     {
         // TODO: Implement run() method.
         /*
@@ -23,6 +24,7 @@ class Consumer extends AbstractProcess
          * 定时500ms检测有没有任务，有的话就while死循环执行
          */
         $this->addTick(500,function (){
+            var_dump($this->isRun);
             if(!$this->isRun){
                 $this->isRun = true;
 //                $redis = new \redis();//此处为伪代码，请自己建立连接或者维护redis连接
@@ -46,7 +48,7 @@ class Consumer extends AbstractProcess
                 }
                 $this->isRun = false;
             }
-            var_dump($this->getProcessName().' task run check');
+//            var_dump($this->getProcessName().' task run check');
         });
     }
 
