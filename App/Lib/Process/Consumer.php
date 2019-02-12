@@ -5,7 +5,7 @@
  * Date: 2018/10/18 0018
  * Time: 9:43
  */
-namespace App\Process;
+namespace App\Lib\Process;
 
 use EasySwoole\Component\Di;
 use EasySwoole\Component\Process\AbstractProcess;
