@@ -5,7 +5,7 @@
  * Date: 2019/2/12
  * Time: 14:35
  */
-namespace App\Config;
+namespace App\Conf;
 return [
     'MYSQL' => [
         'host'          => '127.0.0.1',

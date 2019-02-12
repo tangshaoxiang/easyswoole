@@ -58,6 +58,9 @@ class Index extends Base
         $redisConfig = Config::getInstance()->getConf("redis");
         $this->writeJson("200","成功",$redisConfig);
 
+        $redisConfig = Config::getInstance()->getConf("REDIS");
+        $this->writeJson("200","成功",$redisConfig);
+
        $singwa = Redis::getInstance()->get("singwa456");
        $this->writeJson("200","success",$singwa);
 
