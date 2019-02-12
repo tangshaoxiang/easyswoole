@@ -8,6 +8,7 @@
 namespace App\Lib\Redis;
 
 use EasySwoole\Component\Singleton;
+use EasySwoole\EasySwoole\Config;
 
 class Redis {
     use Singleton;
@@ -21,6 +22,8 @@ class Redis {
         }
 
         try {
+            $redisConfig = Config::getInstance()->getConf("REDIS");
+            var_dump($redisConfig);
             $this->redis = new \Redis();
             $result = $this->redis->connect("127.0.0.1",6379,3);
         } catch (\Exception $e) {

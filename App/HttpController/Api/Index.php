@@ -57,7 +57,8 @@ class Index extends Base
 //       $singwa = Redis::getInstance()->get("singwa456");
 //       $this->writeJson("200","success",$singwa);
 
-
+        $redisConfig = Config::getInstance()->getConf("REDIS");
+        var_dump($redisConfig);
 
         PoolManager::getInstance()->register(RedisPool::class, Config::getInstance()->getConf('REDIS.POOL_MAX_NUM'));
         $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS.POOL_TIME_OUT'));
