@@ -52,9 +52,11 @@ class Index extends Base
 //        return $this->writeJson("200","success",$redis->get("singwa456"));
 
 
+        $mysqlConfig = Config::getInstance()->getConf("mysql");
+        $this->writeJson("200","成功",$mysqlConfig);
 
-        $config = Config::getInstance()->getConf("redis");
-        $this->writeJson("200","成功",$config);
+        $redisConfig = Config::getInstance()->getConf("redis");
+        $this->writeJson("200","成功",$redisConfig);
 
        $singwa = Redis::getInstance()->get("singwa456");
        $this->writeJson("200","success",$singwa);
