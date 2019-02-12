@@ -22,9 +22,10 @@ class EasySwooleEvent implements Event
 
     public static function initialize()
     {
-        self::loadConf();
+
         // TODO: Implement initialize() method.
         date_default_timezone_set('Asia/Shanghai');
+        self::loadConf();
         PoolManager::getInstance()->register(MysqlPool::class, Config::getInstance()->getConf('MYSQL.POOL_MAX_NUM'));
     }
 

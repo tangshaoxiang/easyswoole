@@ -22,7 +22,8 @@ class Redis {
         }
 
         try {
-            $redisConfig = Config::getInstance()->getConf("REDIS");
+            $redisConfig = Config::getInstance()->getConf("redis");
+            var_dump($redisConfig);
             $this->redis = new \Redis();
             $result = $this->redis->connect($redisConfig['host'],$redisConfig['port'],$redisConfig['POOL_TIME_OUT']);
         } catch (\Exception $e) {
