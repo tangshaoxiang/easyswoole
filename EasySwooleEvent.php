@@ -10,7 +10,7 @@ namespace EasySwoole\EasySwoole;
 
 
 use App\Lib\Redis\Redis;
-use App\Process\Consumer;
+use App\Lib\Process\Consumer;
 use App\Utility\Pool\MysqlPool;
 use EasySwoole\Component\Di;
 use EasySwoole\Component\Pool\PoolManager;

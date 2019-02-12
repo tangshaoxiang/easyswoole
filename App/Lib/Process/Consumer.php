@@ -5,12 +5,11 @@
  * Date: 2018/10/18 0018
  * Time: 9:43
  */
-
 namespace App\Process;
 
 use EasySwoole\Component\Di;
 use EasySwoole\Component\Process\AbstractProcess;
-use EasySwoole\EasySwoole\Logger;
+use EasySwoole\Trace\Logger;
 use Swoole\Process;
 
 class Consumer extends AbstractProcess
