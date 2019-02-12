@@ -30,6 +30,8 @@ class Consumer extends AbstractProcess
                     try{
                         $task = Di::getInstance()->set("REDIS")->lPop('imooc_list_test');
 //                        $task = $redis->lPop('task_list');
+                        var_dump($this->getProcessName()."---".$task);
+
                         if($task){
                             var_dump($this->getProcessName()."---".$task);
                             // do you task
