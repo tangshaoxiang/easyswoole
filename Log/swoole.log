@@ -1,0 +1,95 @@
+[2019-02-10 22:53:06 *1438.2]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-10 23:02:46 *1498.7]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1497.6]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1496.5]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1495.4]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1494.3]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1493.2]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1492.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 *1491.0]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1490.15]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1489.14]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1488.13]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1487.12]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1486.11]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1485.10]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1484.9]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 ^1483.8]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-10 23:02:46 $1481.0]	WARNING	swSignal_callback: signal[1] callback is null.
+[2019-02-10 23:02:46 #1480.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:24:45 #1480.1]	NOTICE	Server is shutdown now.
+[2019-02-11 11:26:16 *3086.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 11:32:39 *3086.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 11:32:55 *3086.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 11:58:06 *3153.7]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3152.6]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3151.5]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3150.4]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3149.3]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3148.2]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3147.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 *3146.0]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3145.15]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3144.14]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3143.13]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3142.12]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3141.11]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3140.10]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3139.9]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 ^3138.8]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 11:58:06 $3136.0]	WARNING	swSignal_callback: signal[1] callback is null.
+[2019-02-11 11:58:06 #3135.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 15:27:15 #3135.1]	NOTICE	Server is shutdown now.
+[2019-02-11 15:53:26 *3584.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 15:54:03 *3639.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 15:55:46 *3694.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 15:55:51 *3694.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 16:08:14 *3823.2]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 16:10:36 *3885.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 16:11:15 *3943.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 16:18:55 *4218.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 16:20:19 *4279.2]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 19:39:05 *4594.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 19:47:26 *4819.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-11 19:49:47 *4966.7]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4965.6]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4964.5]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4963.4]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4962.3]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4961.2]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4960.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 *4959.0]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4958.15]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4957.14]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4956.13]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4955.12]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4954.11]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4953.10]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4952.9]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 ^4951.8]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 19:49:47 $4949.0]	WARNING	swSignal_callback: signal[1] callback is null.
+[2019-02-11 19:49:47 #4948.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-11 22:49:10 #4948.1]	NOTICE	Server is shutdown now.
+[2019-02-12 11:33:01 *6893.7]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6892.6]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6891.5]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6890.4]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6889.3]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6888.2]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6887.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 *6886.0]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6885.15]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6884.14]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6883.13]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6882.12]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6881.11]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6880.10]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6879.9]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 ^6878.8]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 11:33:01 $6876.0]	WARNING	swSignal_callback: signal[1] callback is null.
+[2019-02-12 11:33:01 #6875.1]	WARNING	swSignalfd_onSignal: signal[1] callback is null.
+[2019-02-12 13:18:54 #6875.1]	NOTICE	Server is shutdown now.
+[2019-02-12 13:26:54 *7192.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-12 15:11:05 *7729.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-12 15:12:26 *7784.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.
+[2019-02-12 15:21:42 *8039.1]	NOTICE	swFactoryProcess_finish (ERROR 1005): connection[fd=0] does not exists.

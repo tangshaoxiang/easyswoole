@@ -1,0 +1,18 @@
+[2019-02-10 10:53:06][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/http/src/Message/ServerRequest.php][line:62]Too few arguments to function EasySwoole\Http\Message\ServerRequest::getQueryParam(), 0 passed in /home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php on line 30 and exactly 1 expected
+[2019-02-11 11:26:16][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:16]Class 'App\HttpController\Api\abc' not found
+[2019-02-11 11:32:39][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:16]Class 'App\HttpController\Api\abc' not found
+[2019-02-11 11:32:55][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:16]Class 'App\HttpController\Api\abc' not found
+[2019-02-11 03:53:26][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:17]Class 'App\HttpController\Api\Mysqli' not found
+[2019-02-11 03:54:03][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 03:55:46][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 03:55:51][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 04:08:14][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 04:10:36][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 04:11:15][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 04:18:55][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 04:20:19][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/mysqli/src/Mysqli.php][line:104]HOST parameter is required.
+[2019-02-11 07:39:05][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:25]Class 'App\HttpController\Api\Status' not found
+[2019-02-12 01:26:54][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/HttpController/Api/Index.php][line:50]Class 'app\Lib\Redis\Redis' not found
+[2019-02-12 03:11:05][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/Lib/Redis/Redis.php][line:46]Redis server went away
+[2019-02-12 03:12:26][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/Lib/Redis/Redis.php][line:46]Redis server went away
+[2019-02-12 03:21:42][Exception][file:/home/wwwroot/www.darian.xin/easyswoole/App/Lib/Redis/Redis.php][line:46]Redis server went away

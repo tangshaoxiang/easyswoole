@@ -1,0 +1,14 @@
+[2019-02-11 11:24:11][FatalError][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php][line:54]Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[98]. in /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php:54
+Stack trace:
+#0 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php(54): Swoole\Server->__construct('0.0.0.0', 9501, 2, 1)
+#1 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Core.php(116): EasySwoole\EasySwoole\ServerManager->createSwooleServer(9501, 2, '0.0.0.0', Array, 2, 1)
+#2 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/DefaultCommand/Start.php(42): EasySwoole\EasySwoole\Core->createServer()
+#3 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/CommandContainer.php(44): EasySwoole\EasySwoole\Command\DefaultCommand\Start->exec(Array)
+#4 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/CommandRunner.php(50): EasySwoole\EasySwoole\Command\CommandCont
+[2019-02-11 10:48:46][FatalError][file:/home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php][line:54]Uncaught Swoole\Exception: failed to listen server port[0.0.0.0:9501]. Error: Address already in use[98]. in /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php:54
+Stack trace:
+#0 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/ServerManager.php(54): Swoole\Server->__construct('0.0.0.0', 9501, 2, 1)
+#1 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Core.php(116): EasySwoole\EasySwoole\ServerManager->createSwooleServer(9501, 2, '0.0.0.0', Array, 2, 1)
+#2 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/DefaultCommand/Start.php(42): EasySwoole\EasySwoole\Core->createServer()
+#3 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/CommandContainer.php(44): EasySwoole\EasySwoole\Command\DefaultCommand\Start->exec(Array)
+#4 /home/wwwroot/www.darian.xin/easyswoole/vendor/easyswoole/easyswoole/src/Command/CommandRunner.php(50): EasySwoole\EasySwoole\Command\CommandCont
