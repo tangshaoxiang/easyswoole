@@ -11,6 +11,9 @@ namespace App\HttpController\Api;
 use App\Lib\Redis\Redis;
 use App\Utility\Pool\MysqlObject;
 use App\Utility\Pool\MysqlPool;
+use App\Utility\Pool\RedisPool;
+use EasySwoole\Component\Pool\PoolManager;
+use EasySwoole\EasySwoole\Config;
 use EasySwoole\Http\Message\Status;
 
 
@@ -47,7 +50,25 @@ class Index extends Base
 //        $redis->connect("127.0.0.1",6379,5);
 //        $redis->set("singwa456",90);
 //        return $this->writeJson("200","success",$redis->get("singwa456"));
-       $singwa = Redis::getInstance()->get("singwa456");
-       $this->writeJson("200","success",$singwa);
+
+
+
+
+//       $singwa = Redis::getInstance()->get("singwa456");
+//       $this->writeJson("200","success",$singwa);
+
+
+
+        PoolManager::getInstance()->register(RedisPool::class, Config::getInstance()->getConf('REDIS.POOL_MAX_NUM'));
+        $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS.POOL_TIME_OUT'));
+        $redis->set('name', 'blank');
+        $singwa = $redis->get('name');
+        $name = $redis->get('singwa456');
+        var_dump($name);
+        var_dump($singwa);
+        /*
+         * string(5) "blank"
+         */
+        PoolManager::getInstance()->getPool(RedisPool::class)->recycleObj($redis);
     }
 }

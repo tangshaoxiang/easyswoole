@@ -17,7 +17,7 @@ class Redis {
     private function __construct()
     {
         if(!extension_loaded('redis')){
-
+            throw new \Exception("redis.so文件不存在");
         }
 
         try {
