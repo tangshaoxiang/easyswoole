@@ -24,12 +24,14 @@ class Consumer extends AbstractProcess
          * 定时500ms检测有没有任务，有的话就while死循环执行
          */
         $this->addTick(500,function (){
-            var_dump(!$this->isRun);
             if(!$this->isRun){
+                var_dump(111);
                 $this->isRun = true;
 //                $redis = new \redis();//此处为伪代码，请自己建立连接或者维护redis连接
                 while (true){
+                    var_dump(222);
                     try{
+                        var_dump(333);
                         $task = Di::getInstance()->set("REDIS")->lPop('imooc_list_test');
 //                        $task = $redis->lPop('task_list');
                         var_dump($this->getProcessName()."---".$task);
@@ -43,6 +45,7 @@ class Consumer extends AbstractProcess
                             break;
                         }
                     }catch (\Throwable $throwable){
+                        var_dump(444);
                         break;
                     }
                 }
