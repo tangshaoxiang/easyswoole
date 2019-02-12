@@ -25,6 +25,8 @@ class EasySwooleEvent implements Event
 
         // TODO: Implement initialize() method.
         date_default_timezone_set('Asia/Shanghai');
+
+        var_dump(2222222);
         self::loadConf();
         var_dump(1111111);
         PoolManager::getInstance()->register(MysqlPool::class, Config::getInstance()->getConf('MYSQL.POOL_MAX_NUM'));
