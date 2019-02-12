@@ -34,6 +34,7 @@ class EasySwooleEvent implements Event
     public static function loadConf()
     {
         $files = File::scanDirectory(EASYSWOOLE_ROOT . '/App/Conf');
+        var_dump($files);
         if (is_array($files)) {
             foreach ($files['files'] as $file) {
                 $fileNameArr = explode('.', $file);

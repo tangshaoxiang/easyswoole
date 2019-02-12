@@ -6,8 +6,7 @@
  * Time: 14:35
  */
 namespace App\Config;
-return
-[
+return [
     'MYSQL' => [
         'host'          => '127.0.0.1',
         'port'          => '3306',
