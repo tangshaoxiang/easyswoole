@@ -8,6 +8,7 @@
 
 namespace App\HttpController\Api;
 
+use app\Lib\Redis\Redis;
 use App\Utility\Pool\MysqlObject;
 use App\Utility\Pool\MysqlPool;
 use EasySwoole\Http\Message\Status;
@@ -42,9 +43,11 @@ class Index extends Base
 
 
     public function getRedis(){
-        $redis = new \Redis();
-        $redis->connect("127.0.0.1",6379,5);
-        $redis->set("singwa456",90);
-        return $this->writeJson("200","success",$redis->get("singwa456"));
+//        $redis = new \Redis();
+//        $redis->connect("127.0.0.1",6379,5);
+//        $redis->set("singwa456",90);
+//        return $this->writeJson("200","success",$redis->get("singwa456"));
+       $singwa = Redis::getInstance()->get("singwa456");
+       $this->writeJson("200","success",$singwa);
     }
 }
