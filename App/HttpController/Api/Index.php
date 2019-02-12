@@ -54,22 +54,20 @@ class Index extends Base
 
 
 
-//       $singwa = Redis::getInstance()->get("singwa456");
-//       $this->writeJson("200","success",$singwa);
+       $singwa = Redis::getInstance()->get("singwa456");
+       $this->writeJson("200","success",$singwa);
 
-        $redisConfig = Config::getInstance()->getConf("REDIS");
-        var_dump($redisConfig);
 
-        PoolManager::getInstance()->register(RedisPool::class, Config::getInstance()->getConf('REDIS.POOL_MAX_NUM'));
-        $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS.POOL_TIME_OUT'));
-        $redis->set('name', 'blank');
-        $singwa = $redis->get('name');
-        $name = $redis->get('singwa456');
-        var_dump($name);
-        var_dump($singwa);
-        /*
-         * string(5) "blank"
-         */
-        PoolManager::getInstance()->getPool(RedisPool::class)->recycleObj($redis);
+//        PoolManager::getInstance()->register(RedisPool::class, Config::getInstance()->getConf('REDIS.POOL_MAX_NUM'));
+//        $redis = PoolManager::getInstance()->getPool(RedisPool::class)->getObj(Config::getInstance()->getConf('REDIS.POOL_TIME_OUT'));
+//        $redis->set('name', 'blank');
+//        $singwa = $redis->get('name');
+//        $name = $redis->get('singwa456');
+//        var_dump($name);
+//        var_dump($singwa);
+//        /*
+//         * string(5) "blank"
+//         */
+//        PoolManager::getInstance()->getPool(RedisPool::class)->recycleObj($redis);
     }
 }
