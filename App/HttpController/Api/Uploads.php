@@ -7,9 +7,9 @@
  */
 namespace App\HttpController\Api;
 
-class Upload extends Base {
+class Uploads extends Base {
 
-    public function file () {
+    public function file_mp4(){
         var_dump(11111);
 //        $request = $this->request();
 //        $file = $request->getUploadedFile("file");
