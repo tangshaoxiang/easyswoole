@@ -33,10 +33,18 @@ class Files extends Base
         $request  = $this->request();
         try {
             $obj = new Video($request);
-            $obj->upload();
+            $file = $obj->upload();
         }catch (\Exception $e){
             return $this->writeJson(400,$e->getMessage(),[]);
         }
+
+        if (empty($file)){
+              return $this->writeJson(400,"上传失败",[]);
+        }
+        $data = [
+          "url" =>$file
+        ];
+        return $this->writeJson(200,"ok",$data);
 
     }
 }
