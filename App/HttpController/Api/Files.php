@@ -57,7 +57,7 @@ class Files extends Base
 //            第三种  //PHP 反射机制
             $classObj = new ClassArr();
             $classStats = $classObj->uploadClassStat();
-            $uploadObj = $classObj->initClass($type,$classStats,[[$request],[$type]]);
+            $uploadObj = $classObj->initClass($type,$classStats,[$request,$type]);
             $file = $uploadObj->upload();
         }catch (\Exception $e){
             return $this->writeJson(400,$e->getMessage(),[]);

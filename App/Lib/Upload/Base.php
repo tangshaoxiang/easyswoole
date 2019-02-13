@@ -15,6 +15,7 @@ class Base{
 
     public function __construct($request,$type =null)
     {
+        var_dump($type);
         $this->request = $request;
         if (empty($type)){
             $files = $this->request->getSwooleRequest()->files;
