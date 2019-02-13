@@ -31,7 +31,12 @@ class Files extends Base
 
     public function fileTwo(){
         $request  = $this->request();
-        $obj = new Video($request);
-        $obj->upload();
+        try {
+            $obj = new Video($request);
+            $obj->upload();
+        }catch (\Exception $e){
+            return $this->writeJson(400,$e->getMessage(),[]);
+        }
+
     }
 }

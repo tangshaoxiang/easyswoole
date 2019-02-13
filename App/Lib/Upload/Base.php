@@ -13,6 +13,8 @@ class Base{
 
     public $fileType = "video";
 
+    public $file = "";
+
     public $maxSize = 122;
 
     public $fileExtTypes = [
@@ -46,18 +48,26 @@ class Base{
 
         $this->checkMediaType();
 
-        $this->getFile($fileName);
+        $file = $this->getFile($fileName);
+        $flag = $videos->moveTo($file);
+        if (!empty($flag)) {
+            return $this->file;
+        }
+        return false;
     }
 
 
     public function getFile($fileName) {
         $pathinfo = pathinfo($fileName);
         $extension = $pathinfo['extension'];
-        $dir = EASYSWOOLE_ROOT."/webroot".$this->type."/".date("Y")."/".date("m");
+        $dirname = "/".$this->type."/".date("Y")."/".date("m");
+        $dir = EASYSWOOLE_ROOT."/webroot".$dirname;
         if (!is_dir($dir)) {
             mkdir($dir,0777,true);
         }
-        echo Utils::getFileKey($fileName);
+        $basename = "/". Utils::getFileKey($fileName).".".$extension;
+        $this->file = $dirname.$basename;
+        return $dir.$basename;
     }
 
 
