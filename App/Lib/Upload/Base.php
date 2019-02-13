@@ -46,9 +46,11 @@ class Base{
 
         $this->clientMediaType = $videos->getClientMediaType();
 
+        var_dump($this->clientMediaType);
         $this->checkMediaType();
 
         $file = $this->getFile($fileName);
+        var_dump($file);
         $flag = $videos->moveTo($file);
         if (!empty($flag)) {
             return $this->file;
