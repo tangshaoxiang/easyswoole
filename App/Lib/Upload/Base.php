@@ -7,6 +7,8 @@
  */
 namespace App\Lib\Upload;
 
+use App\Lib\Utils;
+
 class Base{
 
     public $fileType = "video";
@@ -29,10 +31,7 @@ class Base{
 
     public function upload(){
         if ($this->type != $this->fileType) {
-            var_dump(222);
             return false;
-        }else {
-            var_dump(1111);
         }
 
         $videos = $this->request->getUploadedFile($this->type);
@@ -46,8 +45,6 @@ class Base{
         $this->clientMediaType = $videos->getClientMediaType();
 
         $this->checkMediaType();
-        print_r($fileName);
-        print_r($this->clientMediaType);
 
         $this->getFile($fileName);
     }
@@ -55,7 +52,12 @@ class Base{
 
     public function getFile($fileName) {
         $pathinfo = pathinfo($fileName);
-        print_r($pathinfo);
+        $extension = $pathinfo['extension'];
+        $dir = EASYSWOOLE_ROOT."/webroot".$this->type."/".date("Y")."/".date("m");
+        if (!is_dir($dir)) {
+            mkdir($dir,0777,true);
+        }
+        echo Utils::getFileKey($fileName);
     }
 
 
