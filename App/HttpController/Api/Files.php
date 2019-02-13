@@ -14,6 +14,8 @@ class Files extends Base
 {
 
     public function file(){
-      return $this->writeJson("200","success","成功");
+      $request  = $this->request();
+      $videos  = $request->getUploadedFile("files");
+      var_dump($videos);
     }
 }
