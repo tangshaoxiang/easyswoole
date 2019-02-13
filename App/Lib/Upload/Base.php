@@ -11,14 +11,7 @@ use App\Lib\Utils;
 
 class Base{
 
-    public $fileType = "video";
 
-    public $maxSize = 122;
-
-    public $fileExtTypes = [
-        'mp4',
-        'x-flv'
-    ];
     public $type = "";
 
     public function __construct($request)
@@ -52,6 +45,7 @@ class Base{
         $flag = $videos->moveTo($file);
         var_dump($this->file);
         if (!empty($flag)) {
+            //$this->file
             return $this->file;
         }
         return false;
