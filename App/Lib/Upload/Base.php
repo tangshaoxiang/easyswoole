@@ -17,7 +17,7 @@ class Base{
         $files = $this->request->getSwooleRequest()->files;
         $type = array_keys($files);
         $this->type = $type[0];
-       return $this->upload();
+        var_dump($this->type);
     }
 
     public function upload(){
