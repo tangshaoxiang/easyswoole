@@ -17,12 +17,14 @@ class Base{
         $files = $this->request->getSwooleRequest()->files;
         $type = array_keys($files);
         $this->type = $type[0];
-        var_dump($this->type);
     }
 
     public function upload(){
         if ($this->type != $this->fileType) {
+            var_dump(222);
             return false;
+        }else {
+            var_dump(1111);
         }
 
         $videos = $this->request->getUploadedFile($this->type);
