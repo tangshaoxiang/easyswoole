@@ -9,7 +9,7 @@ namespace App\Lib\Process;
 
 use EasySwoole\Component\Di;
 use EasySwoole\Component\Process\AbstractProcess;
-use EasySwoole\Trace\Logger;
+use EasySwoole\EasySwoole\Logger;
 use Swoole\Process;
 
 class Consumer extends AbstractProcess
@@ -31,13 +31,13 @@ class Consumer extends AbstractProcess
                     try{
                         $task = Di::getInstance()->get("REDIS")->lPop('imooc_list_test');
 //                        $task = $redis->lPop('task_list');
-                        var_dump($this->getProcessName()."---".$task);
+//                        var_dump($this->getProcessName()."---".$task);
 
                         if($task){
                             var_dump($this->getProcessName()."---".$task);
                             // do you task
                             //发送邮件，推送消息，等待，写log
-                            \EasySwoole\EasySwoole\Logger::getInstance()->log($this->getProcessName()."---".$task);
+//                            Logger::getInstance()->log($this->getProcessName()."---".$task);
                         }else{
                             break;
                         }
