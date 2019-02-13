@@ -27,6 +27,7 @@ class ClassArr {
                 return false;
             }
             $className = $supportedClass[$type];
+            var_dump($params);
             return $needInstance ? (new \ReflectionClass($className))->newInstanceArgs($params[0],$params[1]):$className;
     }
 }
