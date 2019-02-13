@@ -9,6 +9,7 @@
 namespace App\HttpController\Api;
 
 use App\HttpController\Api\Base;
+use App\Lib\Upload\Image;
 use App\Lib\Upload\Video;
 
 class Files extends Base
@@ -32,7 +33,8 @@ class Files extends Base
     public function fileTwo(){
         $request  = $this->request();
         try {
-            $obj = new Video($request);
+//            $obj = new Video($request);
+            $obj = new Image($request);
             $file = $obj->upload();
         }catch (\Exception $e){
             return $this->writeJson(400,$e->getMessage(),[]);
