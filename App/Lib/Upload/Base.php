@@ -18,6 +18,7 @@ class Base{
         $type = array_keys($files);
         $this->type = $type[0];
         print_r($files);
+        $this->upload();
     }
 
     public function upload(){
