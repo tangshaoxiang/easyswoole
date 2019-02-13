@@ -35,9 +35,32 @@ class Base{
 
         $this->clientMediaType = $videos->getClientMediaType();
 
+        $this->checkMediaType();
         print_r($fileName);
         print_r($this->clientMediaType);
+
+        $this->getFile($fileName);
     }
+
+
+    public function getFile($fileName) {
+        $pathinfo = pathinfo($fileName);
+        print_r($pathinfo);
+    }
+
+
+    public function checkMediaType(){
+        $clientMediaType = explode("/",$this->clientMediaType);
+        $clientMediaType = $clientMediaType[1]??"";
+        if (empty($clientMediaType)) {
+            throw new \Exception("上传{$this->type}文件不合法");
+        }
+        if (!in_array($clientMediaType,$this->fileExtTypes)) {
+            throw new \Exception("上传{$this->type}文件不合法");
+        }
+        return true;
+    }
+
 
     public function checkSize() {
         if (empty($this->size)) {
