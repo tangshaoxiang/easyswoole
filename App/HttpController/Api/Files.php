@@ -13,7 +13,7 @@ use App\HttpController\Api\Base;
 class Files extends Base
 {
 
-    public function test(){
+    public function file(){
       return $this->writeJson("200","success","成功");
     }
 }
