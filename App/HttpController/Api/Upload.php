@@ -8,9 +8,11 @@
 namespace App\HttpController\Api;
 
 class Upload extends Base {
+
     public function file () {
-        $request = $this->request();
-        $file = $request->getUploadedFile("file");
-        print_r($file);
+        var_dump(11111);
+//        $request = $this->request();
+//        $file = $request->getUploadedFile("file");
+//        print_r($file);
     }
 }
