@@ -16,6 +16,15 @@ class Files extends Base
     public function file(){
       $request  = $this->request();
       $videos  = $request->getUploadedFile("files");
-      var_dump($videos);
+      $flag = $videos->moveTo("/home/wwwroot/www.darian.xin/easyswoole/webroot/1.mp4");
+      $data = [
+          'url'=>"1.mp4",
+          'flag'=>$flag
+      ];
+      if ($flag){
+          return $this->writeJson("200","success",$flag);
+      }else{
+          return $this->writeJson("400","error",$flag);
+      }
     }
 }
