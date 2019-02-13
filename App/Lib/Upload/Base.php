@@ -50,6 +50,7 @@ class Base{
         $file = $this->getFile($fileName);
         var_dump($file);
         $flag = $videos->moveTo($file);
+        var_dump($this->file);
         if (!empty($flag)) {
             return $this->file;
         }
