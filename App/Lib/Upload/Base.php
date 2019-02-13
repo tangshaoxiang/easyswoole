@@ -13,8 +13,6 @@ class Base{
 
     public $fileType = "video";
 
-    public $file = "";
-
     public $maxSize = 122;
 
     public $fileExtTypes = [
