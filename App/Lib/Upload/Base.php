@@ -9,6 +9,14 @@ namespace App\Lib\Upload;
 
 class Base{
 
+    public $fileType = "video";
+
+    public $maxSize = 122;
+
+    public $fileExtTypes = [
+        'mp4',
+        'x-flv'
+    ];
     public $type = "";
 
     public function __construct($request)
