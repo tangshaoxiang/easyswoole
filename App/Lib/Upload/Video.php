@@ -15,7 +15,7 @@ class Video extends Base {
      * 文件类型
      * @var string
      */
-    public $fileType = "video";
+    public $fileType = "videos";
 
     public $maxSize = 122;
 

@@ -11,7 +11,6 @@ use App\Lib\Utils;
 
 class Base{
 
-
     public $type = "";
 
     public function __construct($request)
