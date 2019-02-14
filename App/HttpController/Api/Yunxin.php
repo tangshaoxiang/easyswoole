@@ -26,10 +26,20 @@ class Yunxin extends Base {
         $this->codeMsg = Config::getInstance()->getConf("yun_xin_code");  //这是code状态表
     }
 
+    /**
+     * 注册云信
+     */
     public function userRegistrId(){
         var_dump("注册云信ID");
-        $result = $this->yxsdk->userRegistrId("666666","darian","{}","https://api.tangyijiqiren.com/images/daBai.png","tsx521");
+//        $result = $this->yxsdk->userRegistrId("666666","darian","{}","https://api.tangyijiqiren.com/images/daBai.png","tsx521");
+        $result = $this->yxsdk->userRegistrId("88888888","darian","{}","https://api.tangyijiqiren.com/images/daBai.png","tsx521");
         var_dump($result);
     }
+
+    public function sendMsg(){
+        $result = $this->yxsdk->sendMsg("666666","0","88888888");
+    }
+
+
 
 }

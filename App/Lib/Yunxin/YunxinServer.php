@@ -330,4 +330,34 @@ class YunxinServer {
         return $result;
     }
 
+    /**
+     * 消息功能-发送普通消息
+     * @param  $from       [发送者accid，用户帐号，最大32字节，APP内唯一]
+     * @param  $ope        [0：点对点个人消息，1：群消息，其他返回414]
+     * @param  $to        [ope==0是表示accid，ope==1表示tid]
+     * @param  $type        [0 表示文本消息,1 表示图片，2 表示语音，3 表示视频，4 表示地理位置信息，6 表示文件，100 自定义消息类型]
+     * @param  $body       [请参考下方消息示例说明中对应消息的body字段。最大长度5000字节，为一个json字段。]
+     * @param  $option       [发消息时特殊指定的行为选项,Json格式，可用于指定消息的漫游，存云端历史，发送方多端同步，推送，消息抄送等特殊行为;option中字段不填时表示默认值]
+     * @param  $pushcontent      [推送内容，发送消息（文本消息除外，type=0），option选项中允许推送（push=true），此字段可以指定推送内容。 最长200字节]
+     * @return $result      [返回array数组对象]
+     */
+    public function sendMsg($from,$ope,$to,$type,$body,$option=array("push"=>false,"roam"=>true,"history"=>false,"sendersync"=>true, "route"=>false),$pushcontent=''){
+        $url = 'https://api.netease.im/nimserver/msg/sendMsg.action';
+        $data= array(
+            'from' => $from,
+            'ope' => $ope,
+            'to' => $to,
+            'type' => $type,
+            'body' => json_encode($body),
+            'option' => json_encode($option),
+            'pushcontent' => $pushcontent
+        );
+        if($this->RequestType=='curl'){
+            $result = $this->postDataCurl($url,$data);
+        }else{
+            $result = $this->postDataFsockopen($url,$data);
+        }
+        return $result;
+    }
+
 }
