@@ -17,18 +17,18 @@ class Yunxin extends Base {
     private $codeMsg;
 
     public function __construct(){
+        parent::__construct();
         // 实例云信的库  去官网注册会生成key和secret
         $yunxinConfig = Config::getInstance()->getConf("yunxin");
         $this->AppKey = $yunxinConfig['AppKey']; //你的Appkey
         $this->AppSecret = $yunxinConfig['AppSecret']; //你的AppSecret
 //        $this->yxsdk = new YunxinServer($this->AppKey,$this->AppSecret,'curl');
         $this->yxsdk = YunxinServer::getInstance($this->AppKey,$this->AppSecret,'curl');
-        $this->codeMsg = Config::getInstance()->getConf("yunxinCode");  //这是code状态表
+        $this->codeMsg = Config::getInstance()->getConf("yun_xin_code");  //这是code状态表
         var_dump(11111);
         var_dump($yunxinConfig);
         var_dump($this->yxsdk);
         var_dump($this->codeMsg);
-        $this->test();
     }
 
     public function test(){
