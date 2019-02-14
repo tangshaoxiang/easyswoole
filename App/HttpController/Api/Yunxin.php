@@ -22,6 +22,7 @@ class Yunxin extends Base {
         $this->AppSecret = $yunxinConfig['AppSecret']; //你的AppSecret
         $this->yxsdk = new YunxinServer($this->AppKey,$this->AppSecret,'curl');
         $this->codeMsg = Config::getInstance()->getConf("yunxinCode");  //这是code状态表
+        var_dump(11111);
         var_dump($yunxinConfig);
         var_dump($this->codeMsg);
     }
