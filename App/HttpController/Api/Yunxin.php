@@ -28,6 +28,7 @@ class Yunxin extends Base {
         var_dump($yunxinConfig);
         var_dump($this->yxsdk);
         var_dump($this->codeMsg);
+        $this->test();
     }
 
     public function test(){
