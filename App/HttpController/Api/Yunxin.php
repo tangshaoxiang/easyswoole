@@ -37,7 +37,8 @@ class Yunxin extends Base {
     }
 
     public function sendMsg(){
-        $result = $this->yxsdk->sendMsg("666666","0","88888888");
+        $result = $this->yxsdk->sendMsg("666666","0","88888888","0",["msg"=>"你好"]);
+        var_dump($result);
     }
 
 

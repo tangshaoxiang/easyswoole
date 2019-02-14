@@ -341,7 +341,7 @@ class YunxinServer {
      * @param  $pushcontent      [推送内容，发送消息（文本消息除外，type=0），option选项中允许推送（push=true），此字段可以指定推送内容。 最长200字节]
      * @return $result      [返回array数组对象]
      */
-    public function sendMsg($from,$ope,$to,$type,$body,$option=array("push"=>false,"roam"=>true,"history"=>false,"sendersync"=>true, "route"=>false),$pushcontent=''){
+    public function sendMsg($from,$ope,$to,$type,$body,$option=array("push"=>false,"roam"=>true,"history"=>false,"sendersync"=>true,"route"=>false,"badge"=>false,"needPushNick"=>true),$pushcontent=''){
         $url = 'https://api.netease.im/nimserver/msg/sendMsg.action';
         $data= array(
             'from' => $from,
