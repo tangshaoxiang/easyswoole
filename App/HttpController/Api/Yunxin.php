@@ -22,25 +22,14 @@ class Yunxin extends Base {
         $yunxinConfig = Config::getInstance()->getConf("yunxin");
         $this->AppKey = $yunxinConfig['AppKey']; //你的Appkey
         $this->AppSecret = $yunxinConfig['AppSecret']; //你的AppSecret
-//        $this->yxsdk = new YunxinServer($this->AppKey,$this->AppSecret,'curl');
         $this->yxsdk = YunxinServer::getInstance($this->AppKey,$this->AppSecret,'curl');
         $this->codeMsg = Config::getInstance()->getConf("yun_xin_code");  //这是code状态表
-        var_dump(11111);
-        var_dump($yunxinConfig);
-        var_dump($this->yxsdk);
-        var_dump($this->codeMsg);
     }
 
-    public function test(){
-//        $yunxinConfig = Config::getInstance()->getConf("yunxin");
-//        $this->AppKey = $yunxinConfig['AppKey']; //你的Appkey
-//        $this->AppSecret = $yunxinConfig['AppSecret']; //你的AppSecret
-//        $this->yxsdk = YunxinServer::getInstance($this->AppKey,$this->AppSecret,'curl');
-//        $this->codeMsg = Config::getInstance()->getConf("yunxinCode");  //这是code状态表
-//        var_dump($yunxinConfig);
-//        var_dump( $this->yxsdk);
-//        var_dump($this->codeMsg);
-        var_dump("yunxin测试");
+    public function userRegistrId(){
+        var_dump("注册云信ID");
+        $result = $this->yxsdk->userRegistrId("666666","darian","{}","https://api.tangyijiqiren.com/images/daBai.png","tsx521");
+        var_dump($result);
     }
 
 }
