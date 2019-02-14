@@ -14,6 +14,7 @@ class Yunxin extends Base {
     private $yxsdk;
     private $AppKey;
     private $AppSecret;
+    private $codeMsg;
 
     public function __construct(){
         // 实例云信的库  去官网注册会生成key和secret
@@ -31,9 +32,10 @@ class Yunxin extends Base {
         $yunxinConfig = Config::getInstance()->getConf("yunxin");
         $this->AppKey = $yunxinConfig['AppKey']; //你的Appkey
         $this->AppSecret = $yunxinConfig['AppSecret']; //你的AppSecret
-        YunxinServer::getInstance($this->AppKey,$this->AppSecret,'curl');
+        $this->yxsdk = YunxinServer::getInstance($this->AppKey,$this->AppSecret,'curl');
         $this->codeMsg = Config::getInstance()->getConf("yunxinCode");  //这是code状态表
         var_dump($yunxinConfig);
+        var_dump( $this->yxsdk);
         var_dump($this->codeMsg);
         var_dump("yunxin测试");
     }
